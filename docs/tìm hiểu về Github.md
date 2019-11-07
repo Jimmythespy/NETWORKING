@@ -1,13 +1,17 @@
 # Github
 -----
+
 ## 1. Lịch sử và nhưng hiểu biết của Github:
 -----
+
 ### Lịch sử và các thông tin ngoài lề:
+
 - Github là một công ty của mỹ cung cấp dịch vụ host cho việc kiểm soát phiên bản trong phát triển phần mềm sử dụng Github
 - Ra đời năm 2008 và được mua lại bởi Microsoft vào năm 2018 với giá là 7.5 tỉ đô.
 - Linh vật của Github là "OctoCat" một con mèo có thân là bạch tuộc được thiết kế bởi Simon Oxley là nhà thiết kế người Anh là người thiết kế ra logo con chim xanh của twitter
 
 ### Github được sử 
+
 - Github cung cấp tất cả các tính năng sẵn có của Git và thêm một số tính năng của riêng mình như một số tính năng là việc hợp tác như
   - kiểm soát lỗi 
   - yêu cầu tính năng (freature request)
