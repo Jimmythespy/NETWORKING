@@ -20,8 +20,8 @@
 
 ## 2. Cài đặt:
 - B1: mở trang [Github for window](https://desktop.github.com/)
-- B2: click vào biểu tượng: Download for window ![picture](NETWORKING/pictures/github download.jpg)
-- B3: khi tải xong chạy trình cài dặt: ![picture](NETWORKING/pictures/githubdesktopicon.png)
+- B2: click vào biểu tượng: Download for window ![picture] (/pictures/githubdownload.png)
+- B3: khi tải xong chạy trình cài dặt: ![picture] (/pictures/githubdesktopicon.png)
 - B4: làm theo hướng dẫn để cài dặt thành công.
 
 ## 3. Cửa sổ làm việc:
