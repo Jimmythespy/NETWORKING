@@ -19,3 +19,11 @@
 - Github cũng là một mạng lưới các nhà phát triển tạo thành một cộng đồng, là nơi mà các nhà tuyển dụng nhìn vào để đánh giá.
 
 ## 2. Cài đặt:
+- B1: mở trang [Github for window](https://desktop.github.com/)
+- B2: click vào biểu tượng: Download for window ![githubforwindowdownlaod](NETWORKING/pictures/github download.jpg)
+- B3: khi tải xong chạy trình cài dặt: ![picture](NETWORKING/pictures/githubdesktopicon.png)
+- B4: làm theo hướng dẫn để cài dặt thành công.
+
+## 3. Cửa sổ làm việc:
+
+
