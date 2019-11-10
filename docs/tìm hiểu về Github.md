@@ -48,16 +48,16 @@ chú thích các phần:
 8. Cửa sổ hiển thị: chi tiết các thay đồi đã được thực hiện.
 
 ## 4. Các thuật ngữ:
-- Repository: là thư mục chứa file của dự án đang được thực hiện. Viết tắt là repo
-- Branch: là một phiên bản tồn tại song song với một repo, nhưng sự thay đổi của nó không ảnh hưởng tới master (branch chính) cho ta khả năng làm việc tự do.
-- Clone: là một bản copy của repo trên máy tính thay vì trên một trang web. Clone còn có thể dùng để chỉ hành động copy một repo về máy
-- Blame: là một tính năng của github cho phép người sử dụng thấy được các thông tin về lần thay đổi cuối như là chi tiết thay đổi, người thực hiện, thời gian...
-- Diff: (different): thể hiện sự khác nhau giữa hai commit, nó mô tả những thứ được thêm vào hay mất đi trong một commit.
-- Fetch: đề cập đến việc nhận các thay đổi mới nhất từ từ kho lưu trữ trực tuyến mà không hợp nhất chúng. Khi các thay đổi này được fetch bạn có thể so sánh chúng với các local branch của mình.
-- Fork: một bản copy repo của người khác tồn tại trên tài khoản của mình.
-- Issuse: đề nghị cải tiến, thắc mắc liên quan đến repo. Nó có thể được tạo bởi bất kỳ ai (đối với các kho lưu trữ công cộng) và được kiểm duyệt bởi các cộng tác viên kho lưu trữ.
-- Pull Request: được đề xuất thay đổi đối với kho lưu trữ được gửi bởi người dùng và được chấp nhận hoặc từ chối bởi các cộng tác viên của kho lưu trữ.
-- Push: gửi các thay đổi hoặc commit của bạn đến một kho lưu trữ từ xa, chẳng hạn như kho lưu trữ được lưu trữ trên GitHub.
+- **Repository**: là thư mục chứa file của dự án đang được thực hiện. Viết tắt là repo
+- **Branch**: là một phiên bản tồn tại song song với một repo, nhưng sự thay đổi của nó không ảnh hưởng tới master (branch chính) cho ta khả năng làm việc tự do.
+- **Clone**: là một bản copy của repo trên máy tính thay vì trên một trang web. Clone còn có thể dùng để chỉ hành động copy một repo về máy
+- **Blame**: là một tính năng của github cho phép người sử dụng thấy được các thông tin về lần thay đổi cuối như là chi tiết thay đổi, người thực hiện, thời gian...
+- **Diff**: (different): thể hiện sự khác nhau giữa hai commit, nó mô tả những thứ được thêm vào hay mất đi trong một commit.
+- **Fetch**: đề cập đến việc nhận các thay đổi mới nhất từ từ kho lưu trữ trực tuyến mà không hợp nhất chúng. Khi các thay đổi này được fetch bạn có thể so sánh chúng với các local branch của mình.
+- **Fork**: một bản copy repo của người khác tồn tại trên tài khoản của mình.
+- **Issuse**: đề nghị cải tiến, thắc mắc liên quan đến repo. Nó có thể được tạo bởi bất kỳ ai (đối với các kho lưu trữ công cộng) và được kiểm duyệt bởi các cộng tác viên kho lưu trữ.
+- **Pull Request**: được đề xuất thay đổi đối với kho lưu trữ được gửi bởi người dùng và được chấp nhận hoặc từ chối bởi các cộng tác viên của kho lưu trữ.
+- **Push**: gửi các thay đổi hoặc commit của bạn đến một kho lưu trữ từ xa, chẳng hạn như kho lưu trữ được lưu trữ trên GitHub.
 
 
   
