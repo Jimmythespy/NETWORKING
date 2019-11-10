@@ -9,7 +9,7 @@
 - Ra đời năm 2008 và được mua lại bởi Microsoft vào năm 2018 với giá là 7.5 tỉ đô.
 - Linh vật của Github là "OctoCat" một con mèo có thân là bạch tuộc được thiết kế bởi Simon Oxley là nhà thiết kế người Anh là người thiết kế ra logo con chim xanh của twitter
 
-### Github được sử 
+### Tính năng:
 
 - Github cung cấp tất cả các tính năng sẵn có của Git và thêm một số tính năng của riêng mình như một số tính năng là việc hợp tác như
   - kiểm soát lỗi 
