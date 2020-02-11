@@ -67,8 +67,8 @@ Có hai kiểu chuyền thông dụng: Chuyền mạch ảo (circuit-switched) v
 ()
 -  Chuyển mạch kiểu gói: Thông điệp đầu tiên được chia thành các gói nhỏ (packet), sau đó các packet lần lượt được chuyền tới nút nhận qua các mạng lưới các thiết bị chuyển mạch trung gian. Mỗi packet mang địa chỉ của nút đích cùng số thứ tự của mình, khi nó đến các thiết bị trung gian, nó sẽ căn cứ vào địa chỉ đích mà chọn đi theo hướng nào kế tiếp. Các packet có thể đến đích theo các con đường khác nhau. Mạng internet hiện nay sử dụng công nghệ chuyển mạch gói này.
 ()
-
-##d. Các chuẩn của mạng:
+-----------------------
+## d. Các chuẩn của mạng:
 -  Chuẩn chính thức: Được công nhận bởi những tổ chức chuẩn hóa chuyên nghiệp VD: Hiệp hội truyền thông quốc tế ITU (international telecommunication union), EIA (Electronic industry association), IEEE (institute for electrical and electronic engineers).
 -  Chuẩn thực tế: Chuẩn tồn tại trong thực tế chứ không được tạo ra bởi một tổ chức nào (hầu như là các ứng dụng được sử dụng nhiều và phổ biến rồi thành chuẩn). VD: Network File System của Sun microsystems, Java cũng của Sun microsytems.
 -  Chuẩn riêng của hãng: Là những quy định cụ thể của một nhà sản xuất nào đó, các đặc tả (chuẩn) này không được công khai mà chỉ được tuân theo và chấp thuận bởi những chính hãng sản xuất ra nó. VD: SNA của IBM (Kiến trúc hệ thống mạng của IBM).
