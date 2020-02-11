@@ -16,7 +16,7 @@ Hoặc truyền thông mạng máy tính cũng có thể được định nghĩa
   - **Chuẩn** (standard): Các quy tắc được thiết lập cụ thể mà cần tuân theo.
 ----------------------
 ## b.Mạng máy tính:
-Định nghĩa: Mạng máy tính là một hệ thống thông tin liên lạc điện tử để chia sẻ tài nguyên giữa các nodes (các thiết bị có khả năng tính toán), sử dụng chung các công nghệ thông tin liên lạc. (theo wikipedia)
+**Định nghĩa**: Mạng máy tính là một hệ thống thông tin liên lạc điện tử để chia sẻ tài nguyên giữa các nodes (các thiết bị có khả năng tính toán), sử dụng chung các công nghệ thông tin liên lạc. (theo wikipedia)
 Thành phần: gồm nhiều thành phần các thành phần được nối với nhau theo một cách thức nào đó và sử dụng chung một ngôn ngữ. Bao gồm:
 - Các thiết bị đầu cuối: (end systems): Theo thuật ngữ của mạng thì end-system là một thiết bị được kết nối tới một mạng máy tinh, hay được gọi là một (end-system) hay là (end-stations), nó được gọi như vậy vì các thiết bị này thường nằm ở RÌA của mạng, được các end-user sử dụng để tương tác với mạng.
   VD: máy tính, các thiết bị có thể kết nối vào mạng....
@@ -45,22 +45,38 @@ GAN: (Global AN) mạng toàn cầu.
 
 **2. Theo cấu hinh ghép nối:**
 Có hai loại: 
-- Điểm tới điểm (point to point): mỗi nút chỉ liên lạc với nút liền kề qua đường liên kết trực tiếp. Việc chuyền dữ liệu thông qua các nứt liền nhau được gọi là bridging hoặc routing.
+- **Điểm tới điểm** (point to point): mỗi nút chỉ liên lạc với nút liền kề qua đường liên kết trực tiếp. Việc chuyền dữ liệu thông qua các nứt liền nhau được gọi là bridging hoặc routing.
   Có hai kiểu phổ biến:
-  - Hình cây (Tree): Là một mô hình phân cấp gồm một nút gốc hoặc một hub, nối đến các nút hai hoặc hub mức hai, các nút hoặc hub này lại được nối tiếp đến các mức 3 và 4....
-  (thêm ảnh).
-  - Hình sao (star): Đặc điểm chính là một hub sử lý trung tâm, hub chuyền tin cho tất cả các nút. Nếu hub dừng hoạt động thì mạng sập.
-  (Thêm ảnh).
-- Điểm tới nhiều điểm (boardcast): Gồm các nút sử dụng chung một kênh chuyền thông , khi gửi sẽ gửi đến tất cả các nứt tham gia kênh chuyền thông đó. Các máy trong mạng sẽ kiểm tra xem mình có phải đích đến của dữ liệu đó không, chỉ có máy đúng sẽ nhận thông điệp.
+  - **Hình cây** (Tree): Là một mô hình phân cấp gồm một nút gốc hoặc một hub, nối đến các nút hai hoặc hub mức hai, các nút hoặc hub này lại được nối tiếp đến các mức 3 và 4....
+  ().
+  - **Hình sao** (star): Đặc điểm chính là một hub sử lý trung tâm, hub chuyền tin cho tất cả các nút. Nếu hub dừng hoạt động thì mạng sập.
+  ().
+- **Điểm tới nhiều điểm** (boardcast): Gồm các nút sử dụng chung một kênh chuyền thông , khi gửi sẽ gửi đến tất cả các nứt tham gia kênh chuyền thông đó. Các máy trong mạng sẽ kiểm tra xem mình có phải đích đến của dữ liệu đó không, chỉ có máy đúng sẽ nhận thông điệp.
   Các kiểu phổ biến: 
-  - Bus: đường chuyền chung trong ảnh được gọi là bus. (thêm ảnh).
-  - Ring: Trong cấu trúc này tất cả nút được nối đến một vòng (một kênh dùng chung). (thêm ảnh).
-  - Vệ tinh: (thêm ảnh)
+  - **Bus**: đường chuyền chung trong ảnh được gọi là bus. (thêm ảnh).
+  ()
+  - **Ring**: Trong cấu trúc này tất cả nút được nối đến một vòng (một kênh dùng chung). (thêm ảnh).
+  ()
+  - **Vệ tinh**: (thêm ảnh)
+  ()
   Mô hình: unicast, boardcast, multicast....
+
 **3. Theo kiểu chuyền:**
+Có hai kiểu chuyền thông dụng: Chuyền mạch ảo (circuit-switched) và mạng chuyển gói (packet-switched).
+-  Chuyển mạch ảo: Phải thiết lập một mạch chuyền vật lý giữa nút nguồn và nút đích trước khi chuyền dữ liệu thực sự. Mạch này tồn tại trong suốt thời gian chuyền dữ liệu. Sau khi thực hiện xong việc chuyền dữ liệu kết nối được giải phóng và được cấp phát cho một đường chuyền khác. Sử dụng cách này, một đường chuyền có thể sử dụng cho nhiều phiên trao đổi thông tin khác nhau.
+()
+-  Chuyển mạch kiểu gói: Thông điệp đầu tiên được chia thành các gói nhỏ (packet), sau đó các packet lần lượt được chuyền tới nút nhận qua các mạng lưới các thiết bị chuyển mạch trung gian. Mỗi packet mang địa chỉ của nút đích cùng số thứ tự của mình, khi nó đến các thiết bị trung gian, nó sẽ căn cứ vào địa chỉ đích mà chọn đi theo hướng nào kế tiếp. Các packet có thể đến đích theo các con đường khác nhau. Mạng internet hiện nay sử dụng công nghệ chuyển mạch gói này.
+()
+
+##d. Các chuẩn của mạng:
+-  Chuẩn chính thức: Được công nhận bởi những tổ chức chuẩn hóa chuyên nghiệp VD: Hiệp hội truyền thông quốc tế ITU (international telecommunication union), EIA (Electronic industry association), IEEE (institute for electrical and electronic engineers).
+-  Chuẩn thực tế: Chuẩn tồn tại trong thực tế chứ không được tạo ra bởi một tổ chức nào (hầu như là các ứng dụng được sử dụng nhiều và phổ biến rồi thành chuẩn). VD: Network File System của Sun microsystems, Java cũng của Sun microsytems.
+-  Chuẩn riêng của hãng: Là những quy định cụ thể của một nhà sản xuất nào đó, các đặc tả (chuẩn) này không được công khai mà chỉ được tuân theo và chấp thuận bởi những chính hãng sản xuất ra nó. VD: SNA của IBM (Kiến trúc hệ thống mạng của IBM).
+-  Chuẩn hiệp hội: bản chất là chuẩn chính thức nhưng các chuẩn này được thiết kế và thỏa thuân bởi một nhóm các nhà sản xuất (tạo thành hiệp hội) với mục đích, mục tiêu chung. Các nhà sản xuất cam kết hỗ trợ các chuẩn được phát triển bởi hiệp hội.
+VD: Fast Ethernet, ATM (Asynchronous Transfer Mode), Gigabit ethernet, 4K (của samsung), 8k.....
 
 
-
+(SỐ ẢNH: 7)
 
 
 
