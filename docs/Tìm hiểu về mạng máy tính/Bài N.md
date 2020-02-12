@@ -3,11 +3,13 @@
 -----------------------------
 ## I. Xây dụng nguyên tắc truyền dữ liệu tin cậy:
   Phần này sẽ chình bày tổng quan dịch vụ truyền dữ liệu tin cậy. Dịch vụ này có thể nằm ở tầng giao vận, tầng ứng dụng, tầng mạng, liên kết dữ liệu. Dưới đây là các nguyên tắc chung của chuyền dữ liệu tin cậy, được xây dụng theo độ phức tạp tăng dần.
+  
   Ta gọi giao thức truyền dữ liệu tin cậy này là (rdt) (reliable data transfer).
   
 --------------------------
 ### 1. rdt 1.0: chuyền dữ liệu tin cậy trên kênh chuyền tin cậy hoàn toàn:
 -  Ta sẽ mô tả trạng thái của bên nhận và bên gửi bằng kỹ thuật hữu hạn trạng thái (FSM)(Finite state machine). Đây là một cách để biểu diễn trạng thái của một máy trong quá trình chuyền.
+
   CHI TIẾT:
 -  Phía gửi: công việc là nhận dữ iệu từ tầng trên, tạo ra gói dữ liệu (packet), và gửi gói dữ liệu lên kênh truyền. 
 -  Phía nhận: Nhận gói dữ liệu, lấy dữ liêu ra khỏi gói, đưa dữ liệu lên tầng trên 
@@ -18,15 +20,16 @@
 ### 2. rdt 2.0: Truyền dữ liệu trên kênh chuyền bị lỗi:
   Các lỗi có thể sảy ra: Các bit bị lỗi (0 thành 1, 1 thành 0)
 -  Để giải quyết tình trạng này giao thức rdt 2.0 sử dụng một kĩ thuật khác: phản hồi tích cực ACK (positive acknowledgement), và phản hồi tiêu cực NAK (negative acknowledgement). Giao thức sẽ gửi cho bên gửi một thông điệp điều khiển báo cho bên gửi biết dữ liệu nào đúng dữ liệu nào bị lỗi để yêu cầu chuyền lại. 
+
 -  Các giao thức sử dụng phương thức này được gọi là các giao thức AQR (automatic reREQUEST): các giao thức này cần có các khả năng:
-  -  Phát hiện lỗi (error correction): bằng cách sử dụng trường checksum (Sử dụng một đoạn dữ liệu thừa thêm vào các gói dữ liệu).
-  -  Phản hồi (reciver feedback): Báo nhận đúng hay sai.
-  -  Truyền lại (retransmission): gói dữ liệu sẽ được chuyền lại.
+    -  Phát hiện lỗi (error correction): bằng cách sử dụng trường checksum (Sử dụng một đoạn dữ liệu thừa thêm vào các gói dữ liệu).
+    -  Phản hồi (reciver feedback): Báo nhận đúng hay sai.
+    -  Truyền lại (retransmission): gói dữ liệu sẽ được chuyền lại.
   CHI TIẾT:
 -  Phía gửi: có hai trạng thái:
-  - Trạng thái 1: phía gửi đợi dữ liệu từ tầng trên.
-  - trạng thái 2: phía gửi đợi ACK NAK của bên nhận.
-  (phía nhận chỉ nhận thêm khi có ACK của gói trước)
+    - Trạng thái 1: phía gửi đợi dữ liệu từ tầng trên.
+    - trạng thái 2: phía gửi đợi ACK NAK của bên nhận.
+    (phía nhận chỉ nhận thêm khi có ACK của gói trước)
 - Phía nhận: chỉ có một trạng thái. Nhận được gói, phản hồi ACK hoặc NAK phụ thuộc vào gói được gửi.
 ()()
 
