@@ -73,6 +73,7 @@ Giả sử bên gửi là nơi phát hiện mất gói dữ liệu, có hai trư
 ---------------------
 ## II. Giao thức truyền dữ liệu tin cậy liên tục: (pipeline).
 Cốt lõi của giao thức rdt 3.0 là hành vi "dừng và chờ" (stop and wait). Mặc dù hoạt động đúng nhưng hiệu quả không cao: tầm 0.0015%
+
 => Giải pháp là cho phép phía gửi gửi đồng thời niều gói dữ liệu mà không cần phải trờ gói biên nhận. Kỹ thuật gửi liên tục này gọi là Pipeline (kỹ thuật đường ống). Nó đòi hỏi những yêu cầu.
 
 -  Khoảng số thứ tự phải tăng: Vi nhiều gói dữ liệu tồn tại liên tiếp trên đường chuyền, để chánh trùng lặp gói dữ liệu. 
@@ -89,6 +90,27 @@ Trong giao thức này ta cần chú ý một số khoảng giá trị số th�
 - (nextsequence,base+N):  Ứng với số các gói sẽ được gửi nếu dữ liệu từ tầng trên xuống.
 - (base+N,..):            Chưa được sử dụng cho tới khi các gói trước được biên nhận.
   N được là khoảng số thứ tự cho phép các gói dữ liệu đã gửi nhưng chưa được biên nhận, có thể xem là một "cửa sổ" có kích thước xác định khi vận hành cửa sổ này có thể chượt trên toàn bộ khoảng số thứ tự. N thường được gọi là (window size). Giao thức GBN gọi là sliding window.
+
+().
+Hình trên là FSM mở rộng của phía gửi và phía nhận trong giao thức GBN chỉ sử dụng ACK, gọi là FSM mở rộng.
+
+Trong giao thức này: 
+- Phía gửi có ba sự kiện sau:
+    - Có dữ liệu từ trên xuống: 
+    - Nhận được một ACK: ACK này có mạng tính tích lũy, có nghĩa là bên nhận chỉ biên nhận cho gói cuối cùng gửi đúng và đúng thứ tự, bởi vậy sẽ dễ dàng hơn cho bên gửi.
+    - Hết thời gian chờ (timeout): Khi hết thời gian chờ, máy gửi sẽ gửi lại tất cả các gói dữ liệu chưa được biên nhận. Bên gửi chỉ sử dụng 1 timer cho gói gửi đi lâu nhất mà chưa có biên nhận. Nếu nhận được một ACK nào đó thì timer sẽ khởi động lại. Nếu tất cả gói dữ liệu đã được biên nhận ta có thể dừng timer.
+- Phía gửi có các sự kiện đơn giản sau: Nhận được đúng gói dữ liệu và đúng thứ tự thì biên nhận cho gói dữ liệu đó và chuyển gói đó lên trên, các trường hợp còn lại, loại bỏ gói dữ liệu và gửi lại ACK cho gói cuối cùng nhận được (Giao thức không sử dụng NAK). 
+( Chú ý ở đây sử dụng ACK tích lũy).
+().
+
+### 2. Giao thức lặp lại có lựa chọn: (selective repeat).
+Giao thức này cũng gần giống như GBN khi đều sử dụng cửa sổ trượt. 
+
+Nhung nó có một ưu thế. GBN trong một vài tình huống hiệu suất của GBN lại cực thấp, khi mất một gói tin ta phải chuyền lại nhiều gói tin không cần thiết.
+
+Giao thức (SR) tránh việc chuyền lại không cần thiết bằng cách chỉ chuyển lại các gói tin mà nó cho là lỗi (hoặc mất). Để chuyền lại từng gói tin cần thiết, bên nhận cần biên nhận cho từng gói tin đã chuyền đúng.
+().
+Bên nhận của SR sẽ biên nhận cho bất cứ gói tin nào đến đúng mà không cần đúng thứ tự. Gói tin đó sẽ được lưu lại cho đến khi đủ các gói tin còn thiếu để chuyển lên trên theo đúng thứ tự.
 
  
   
