@@ -38,6 +38,25 @@ ATM: Các gói tin trong kiến trúc mạng này được gọi là ATM cell.
 - **Dịch vụ chuyền tốc độ biến đổi** VBR (variable bit rate): Giống như CBR nhưng tốc độ có thể được thay đổi theo một số tham số người dùng nhập. Có hai loại real-time, nonreal-time.
 
 ## 5. Nguyên lý định tuyến:
+- Định tuyến: việc xác định đường đi của các gói tin khi đi qua các thiết bị trung gian.
+- Trái tim của một giao thức định tuyến là một thuật toán định tuyến, với một mục tiêu: có một tập hợp các router và các liên kết giữa chúng ta phải sác định được đường đi tốt nhất cho gói tin từ nguồn tới đích.
+- Ta sẽ sử dụng ký thuật biểu diễn sơ đồ mạng đồ thị:
+(ảnh).
+- Các đỉnh (node) (nút) của sơ đồ này biểu diễn các router, những đoạn thẳng (cung) biểu diễn kết nối giữa hai nút, các kết nối này sẽ có một giá tri ta gọi là giá của cung, là một giá trị đại số biểu thị cho độ khó của việc chuyền gói tin qua cung đó (giá trị càng lớn chuyền càng khó), (thực tế dựa trên thực tế độ tắc nghẽn hay trễ của đường chuyền).
+
+**Phân loại thuật toán**: Thuật toán định tuyến có hai loại:
+        - **Thuật toán định tuyến toàn cục:** (global) thuật toán yêu cầu dữ liệu về tất cả các cung trong mạng, chúng được gọi là link state vì phải biết được mỗi liên kết vào mạng trước khi bước vào quá trình tính toán.
+        - **Thuật toán định tuyến phân tán:** Thực hiện dần theo hình thức phân tán, không nút nào co đầy đủ thông tin về giá của các liên kết trong mạng. (giải thích tạm)
+Có thêm 2 kiểu phân loại nữa là: theo nơi tính toán (tập trung vs nhiều nới) để nói đến nơi chạy thuật toán định tuyến, theo tính chất động hay tĩnh của giao thức (Chỉ sự thay đổi của các tuyến đường theo thời gian do tác động của các yếu tố bên ngoài).
+
+### a. Thuật toán linkk state: Dijkstra
+- Cần phải xác định được cấu trúc mạng và giá của các kết nối đều phải được sác định trước. Điều này sảy ra bằng cách mỗi nút sẽ tự gửi thông điệp quảng bá về mình khi tham gia vào mạng sau đó mạng sẽ dần dần biết được thông tin về toàn bộ mạng. 
+- Còn được gọi là thuật toán Dijkstra (theo tên người phát minh).
+- Link hướng dẫn: https://www.youtube.com/watch?v=XB4MIexjvY0&t=474s
+- Độ phức tạp của thuật toán qua n bước: n.(n+1)/2 (hay gọi là O(n^2)) có thể được cải thiệt bằng cách sử dụng cấu trúc dữ liệu HEAP.
+
+### b. Thuật toán distance vector: Belman Ford.
+
 
 
 
