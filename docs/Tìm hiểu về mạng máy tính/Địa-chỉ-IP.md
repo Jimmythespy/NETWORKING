@@ -18,5 +18,5 @@
 
 Mạng: Là cấu trúc tổng thể gồm các máy tính, router và liên kết giữa chúng. Thuật ngữ này còn được sử dụng với ý nghĩa cụ thể hơn, liên quan chặt chẽ tới địa chỉ IP.
 
-![IPv4](docs/pics/28_IPv4.png)
+![IPv4](/docs/pics/28_IPv4.png)
 
