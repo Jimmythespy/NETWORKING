@@ -15,6 +15,7 @@
 - Địa chỉ IPv4 có độ dài 32 bit (4 byte). Đủ để đánh địa chỉ cho 4.3 tỉ giao diện kết nối.
 - Được viết theo ký pháp dấu chấm thập phân (dot-decimal notation): có nghĩa là 1 địa chỉ gồm 32 bit, cứ mỗi 8 bit ta đặt một dấu chấm phía sau, mỗi 8 bit đó ta đổi ra hệ thập phân => trước mỗi dấu chấm (trừ số cuối cùng) là một số có độ lớn từ 0 -> 255.
 - Địa chỉ cho mạng: Mỗi giao diện kết nối của một máy tính hoặc một router phải có một địa chỉ IP xác định duy nhất. Địa chỉ này ko thể lựa chọn một cách tùy ý mà phải phụ thuộc vào mạng mà nó kết nối vào. 
+
 Mạng: Là cấu trúc tổng thể gồm các máy tính, router và liên kết giữa chúng. Thuật ngữ này còn được sử dụng với ý nghĩa cụ thể hơn, liên quan chặt chẽ tới địa chỉ IP.
-![](docs/pics/28_IPv4.png)
+[IPv4](docs/pics/28_IPv4.png)
 
