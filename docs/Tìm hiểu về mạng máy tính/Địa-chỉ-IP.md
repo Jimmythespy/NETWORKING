@@ -17,5 +17,5 @@
 - Địa chỉ cho mạng: Mỗi giao diện kết nối của một máy tính hoặc một router phải có một địa chỉ IP xác định duy nhất. Địa chỉ này ko thể lựa chọn một cách tùy ý mà phải phụ thuộc vào mạng mà nó kết nối vào. 
 
 Mạng: Là cấu trúc tổng thể gồm các máy tính, router và liên kết giữa chúng. Thuật ngữ này còn được sử dụng với ý nghĩa cụ thể hơn, liên quan chặt chẽ tới địa chỉ IP.
-[IPv4](docs/pics/28_IPv4.png)
+![IPv4](docs/pics/28_IPv4.png)
 
