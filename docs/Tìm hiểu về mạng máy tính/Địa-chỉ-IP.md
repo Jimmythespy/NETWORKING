@@ -15,12 +15,12 @@
 
 ## 1. Địa chỉ IPv4:
 - Địa chỉ IPv4 có độ dài 32 bit (4 byte). Đủ để đánh địa chỉ cho 4.3 tỉ giao diện kết nối.
-- Được viết theo ký pháp dấu chấm thập phân (dot-decimal notation): có nghĩa là 1 địa chỉ gồm 32 bit, cứ mỗi 8 bit ta đặt một dấu chấm phía sau, mỗi 8 bit đó ta đổi ra hệ thập phân => trước mỗi dấu chấm (trừ số cuối cùng) là một số có độ lớn từ 0 -> 255.
+- Được viết theo ký pháp dấu chấm thập phân (dot-decimal notation): có nghĩa là 1 địa chỉ là một dải gồm 32 bit, cứ mỗi 8 bit ta đặt một dấu chấm phía sau, mỗi 8 bit nằm giữa hai dấu chấm ta đổi ra hệ thập phân => mỗi số ta thu đươc là một số có độ lớn từ 0 -> 255.
 - Địa chỉ cho mạng: Mỗi giao diện kết nối của một máy tính hoặc một router phải có một địa chỉ IP xác định duy nhất. Địa chỉ này ko thể lựa chọn một cách tùy ý mà phải phụ thuộc vào mạng mà nó kết nối vào. 
 
 **Mạng**: Là cấu trúc tổng thể gồm các máy tính, router và liên kết giữa chúng. Thuật ngữ này còn được sử dụng với ý nghĩa cụ thể hơn, liên quan chặt chẽ tới địa chỉ IP.
 
-<img align="left" width="100" height="100" src="https://github.com/Jimmythespy/NETWORKING/blob/master/docs/pics/28_IPv4.png">
+![IPv4 struc](/docs/pics/28_IPv4.png)
 
 Trong hình vẽ trên 3 giao diện của router được kết nối tới 7 máy tính. Địa chỉ giao diện của các router và máy tính có các đặc điểm là 24 bit đầu là giống nhau. Chúng được kết nối với nhau bằng một kết nối duy nhất. 
 
@@ -38,11 +38,13 @@ Kiến trúc địa chỉ Internet đầu tiên được đưa ra 4 lớp địa
 
 ![IPv4 struc](/docs/pics/27_cấu_trúc_IPv4.png)
 
-Còn thiếu một lớp E được dự trữ cho tương lai, nghiên cứu và phát triển hệ thống mạng.
+Lớp E được dự trữ cho tương lai, nghiên cứu và phát triển hệ thống mạng.
 
-Nhưng cấu trúc chia ra bốn lớp địa chỉ này không còn được sử dụng nữa, nó không còn hợp lý khi số các tổ trức nhỏ và vừa ra tăng. Một lớp địa chỉ IP có thể là quá lớn so với một tổ trức nhưng lớp khác lại là quá nhỏ cho một tổ chức khác. Với kiểu gán địa chỉ không phù hợp như vậy thì không gia địa chỉ IPv4 sẽ nhanh chóng bị cạn kiệt. Để giải quyết vấn đề này, vào năm 1993 IETF chuẩn hóa "Định tuyến liên miền không phân lớp" (Classless interdomain routing - CIDER). Nó cho phép việc độ dài của phần mạng của địa chỉ IP tùy ý, không nhất thiết là 8, 16, 24 bit. 
+Nhưng cấu trúc chia ra bốn lớp địa chỉ này không còn được sử dụng nữa, nó không còn hợp lý khi số các tổ trức nhỏ và vừa ra tăng. Một lớp địa chỉ IP có thể là quá lớn so với một tổ trức nhưng lớp khác lại là quá nhỏ cho một tổ trức khác. Với kiểu gán địa chỉ không phù hợp như vậy thì không gia địa chỉ (address space) IPv4 sẽ nhanh chóng bị cạn kiệt. 
 
-Khuân dạng mới sẽ có dạng **a.b.c.d/x** 
+Để giải quyết vấn đề này, vào năm 1993,tổ trức IETF đã chuẩn hóa "Định tuyến liên miền không phân lớp" (Classless interdomain routing - CIDER). Nó cho phép độ dài của phần mạng (tiền tố mạng) của địa chỉ IP tùy ý, không nhất thiết là 8, 16, 24 bit. Đồng nghĩa với việc cấp địa chỉ cho các tổ chức sẽ không gây ra hiện tượng bị thừa hay thiếu.
+
+Khuân dạng mới theo chuẩn CIDER sẽ có dạng **a.b.c.d/x** 
 VD: a.b.c.d/21 thì 21 bit đầu được xác định là địa chỉ mạng của tổ chức. 
 
 Trên thực tế tổ chức có thể tiếp tục chia 11 bit còn lại để tạo thành các mạng con (subnetting).
