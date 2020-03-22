@@ -1,6 +1,6 @@
 # Địa chỉ IP:
 - Khi nói đến tầng mạng của mô hình TCP/IP ta có ba giao thức quan trọng:
-  - Giao thức định tuyến: Dijkstra hoặc là Bellman Ford.
+  - Giao thức định tuyến: Link state (Dijkstra) và Distance vector (Bellman Ford).
   - Giao thức ICMP (Internet control message protocols).
   - Giao thức IP.
 - Với giao thức IP có các ứng dụng sau:
@@ -48,7 +48,7 @@ Khuân dạng mới theo chuẩn CIDER sẽ có dạng **a.b.c.d/x**
 
 VD: a.b.c.d/21 thì 21 bit đầu được xác định là địa chỉ mạng của tổ chức. 
 
-Trên thực tế tổ chức có thể tiếp tục chia 11 bit còn lại để tạo thành các mạng con (subnetting).
+Trên thực tế, tổ chức có thể tiếp tục chia 11 còn lại bit ra thành các mặt nạ mạng nhỏ hơn để tạo thành các mạng con trong một mạng lớn (subnetting).
 
 ### b. Gán địa chỉ cho mỗi giao diện:
 - Cấu hình bằng tay. Địa chỉ IP được người quản trị viên của mạng cấu hình vào máy tính (thường trong file cấu hình).
