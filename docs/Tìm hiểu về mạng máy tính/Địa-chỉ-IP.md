@@ -55,9 +55,30 @@ Trên thực tế tổ chức có thể tiếp tục chia 11 bit còn lại đ�
   - RIPE: Cho khu vực châu Âu.
   - APNIC: cho khu vực châu Á.
 
+## 2. Địa chỉ IPv6:
+- Được chuẩn hóa bởi IETF vào năm 1998 với mục tiêu để thay thế địa chỉ IPv4 khi không gian địa chỉ này đang dần cạn kiệt.
+- Khác với IPv4, IPv6 có độ dài 128 bit đủ để đánh địa chỉ cho 2^128.
+- Địa chỉ IPv6 được biểu diễn bởi 8 phần, cách nhau bởi dấu ":", mỗi phần gồm 16 bit đánh kí tự của mã thập lục phân.
+- Đơn giản hóa địa chỉ IPv6: 
+  - Với mỗi phần gồm 4 số 0 "0000" sẽ được rút gọn bởi :: đứng cạnh nhau.
+  - Với mỗi 1 hay 2 trở lên số 0 nằm bên trái ký tự sẽ được bỏ. 
 
+VD:2001:0db8:0000:0000:0000:8a2e:0370:7334 -> 2001:db8::8a2e:370:7334.
 
+## 3. Chuyển đổi giữa IPv6 và IPv4: 
+Có 2 kỹ thuật chuyển đổi được sử dụng: Dual-stack, tunneling.
+- **Dual-stack**: Là kỹ thuật đưa vào các thiết bị hỗ trợ cả hai phiên bản IP là IPv4 và IPv6. Những thiết bị như vậy có khả năng gửi và nhận cả hai gói dữ liệu thuộc hai phiên bản của IP. Khi trao đổi với một nút IPv4 nó sẽ sử dụng gói dữ liệu IPv4 và khi trao đổi với một nút IPv6 sẽ sử dụng gói dữ liệu IPv6. Nút này cần phải có cả hai loại địa chỉ, và phải có khả năng nhận biết được nút có khả năng IPv6 hay không. Điều này có thể giải quyết bằng hệ thống DNS.
+  - Nhược điểm: Nó cho phép sử dụng cả hai phiên bản. Nhưng giả sử một nút hỗ trợ IPv6 muốn gửi gói tin IPv6 cho một máy hỗ trợ IPv6 qua một nút chỉ hỗ trợ IPv4. Trường hợp này gây ra hiện tượng phải chuyển từ IPv6 sang IPv4, khiến một số trường thông tin trong gói dữ liệu của IPv6 không được bảo toàn. Điều đó sẽ được khắc phục trong Tunneling.
 
+![anh]()
+- **Tunneling**: Khắc phục vấn đề trên, kỹ thuật này cho phép đặt gói dữ liệu IPv6 vào trong gói dữ liệu của IPv4 để chuyển đi. Qua các nút chỉ hỗ trợ IPv4 và được tách ra thành gói dữ liệu nguyên bản khi đến nút hỗ trợ IPv6.
+![anh2]()
 
+## 4. IPv4-mapped IPv6:
+- Sự áp dụng của dual-stack IPv4 và IPv6 đã tạo ra một loại địa chỉ đặc biệt hơn là địa chỉ IPv4-mapped IPv6. 
+- Được biểu diễn bởi:
+  - 96 bit đầu viết theo ký pháp của IPv6.
+  - 32 bit còn lại là của chuẩn IPv4 được viết bởi ký pháp dấu chấm thập phân.
+- Loại địa chỉ này không còn được sử dụng do sự khác biệt lớn giữa hai loại phiên bản.
 
 
