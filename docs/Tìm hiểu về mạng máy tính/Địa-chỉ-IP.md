@@ -44,7 +44,8 @@
 
   Để giải quyết vấn đề này, vào năm 1993,tổ trức IETF đã chuẩn hóa "Định tuyến liên miền không phân lớp" (Classless interdomain routing - CIDER). Nó cho phép độ dài của phần mạng (tiền tố mạng) của địa chỉ IP tùy ý, không nhất thiết là 8, 16, 24 bit. Đồng nghĩa với việc cấp địa chỉ cho các tổ chức sẽ không gây ra hiện tượng bị thừa hay thiếu.
 
-Khuân dạng mới theo chuẩn CIDER sẽ có dạng **a.b.c.d/x** 
+Khuân dạng mới theo chuẩn CIDER sẽ có dạng **a.b.c.d/x**
+
 VD: a.b.c.d/21 thì 21 bit đầu được xác định là địa chỉ mạng của tổ chức. 
 
 Trên thực tế tổ chức có thể tiếp tục chia 11 bit còn lại để tạo thành các mạng con (subnetting).
