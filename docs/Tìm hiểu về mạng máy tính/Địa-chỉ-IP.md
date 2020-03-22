@@ -36,7 +36,7 @@
 
   Kiến trúc địa chỉ Internet đầu tiên được đưa ra 4 lớp địa chỉ được minh họa như hình vẽ dưới đây:
 
-![IPv4 struc](/docs/pics/27_cấu_trúc_IPv4.png)
+![IPv4 struc](/docs/pics/unnamed.png)
 
   Lớp E được dự trữ cho tương lai, nghiên cứu và phát triển hệ thống mạng.
 
