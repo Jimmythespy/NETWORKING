@@ -23,7 +23,7 @@ Mô hình mạng là một mô hình mang tính khái niệm được đưa ra �
 - Tại tầng cuối cùng của mô hình, truyền thông diễn ra trực tiếp. Nhưng đối với các tầng cao hơn, dữ liêu được chuyển dần xuống bên dưới, đi ra khỏi máy gửi tại tầng vật lý. Khi dữ liệu đến máy nhận, nó sẽ được chuyển lên trên đi ngược con đường lúc đến.
 - Tại mỗi tầng, dữ liệu của từng tầng sẽ được thêm vào dữ liệu nguyên bản. Các thông tin thêm vào này được gọi là: header (nếu thêm vào đầu dữ liệu), hoặc trailer (Thêm vào cuối dữ liệu). Header được thêm vào tại các tầng 6,5,4,3,2; trailer được thêm vào tại tầng 2.
 - Tại tâng 1, gói dữ liệu được chuyển thành dạng tín hiệu có thể truyền qua môi trường vật lý là dây dẫn.
-- T
+![]()
 
 ### Giao diện giữa các tầng:
 - Trên cùng một máy tính, hai tầng kề nhau trao đổi dữ liệu với nhau qua các giao diện (interface). Hay theo thuật ngữ mạng ta gọi là điểm truy cập dịch vụ (Service Access point-SAP) vì tầng trên yêu cầu dịch vụ tầng dưới qua nó.
@@ -31,7 +31,7 @@ Mô hình mạng là một mô hình mang tính khái niệm được đưa ra �
 
 ### Tổ trức của các tầng
 - Có nhiều cách để phân chia 7 tầng này nhưng ta sẽ phân chia như sau:
-- 7 tầng được chia vào 4 nhóm:
+- 7 tầng được chia vào 3 nhóm:
   - Nhóm hỗ trợ mạng gồm: tầng vật lý, liên kết dữ liệu, tầng mạng. Chịu trách nghiệm về mặt liên quan đến khía cạnh vật lý khi chuyền dữ liệu.
   - Nhóm hỗ trợ người dùng gồm: phiên, trình diễn, ứng dụng. Chúng tạo khả năng liên tác giữa các phần mềm khác nhau.
   - Tầng giao vận & liên kết dữ liệu: đảm bảo chuyền dữ liệu đầu cuối tin cậy. 
