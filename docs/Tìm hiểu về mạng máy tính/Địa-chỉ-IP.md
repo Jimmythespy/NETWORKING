@@ -20,7 +20,7 @@
 
   **Mạng**: Là cấu trúc tổng thể gồm các máy tính, router và liên kết giữa chúng. Thuật ngữ này còn được sử dụng với ý nghĩa cụ thể hơn, liên quan chặt chẽ tới địa chỉ IP.
 
-![IPv4 struc](/docs/pics/28_IPv4.png)
+![IPv4 struc](/docs/pics/địa_chỉ_IP/28_IPv4.png)
 
   Trong hình vẽ trên 3 giao diện của router được kết nối tới 7 máy tính. Địa chỉ giao diện của các router và máy tính có các đặc điểm là 24 bit đầu là giống nhau. Chúng được kết nối với nhau bằng một kết nối duy nhất. 
 
