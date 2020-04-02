@@ -16,7 +16,7 @@ Mô hình mạng là một mô hình mang tính khái niệm được đưa ra �
 ### Đặc điểm:
 - Kiến trúc OSI gồm 7 tầng theo thứ tự từ dưới lên là: Tầng vật lý, tầng liên kết dữ liệu, tầng mạng, tầng giao vận, tầng phiên, tầng trình diễn, tầng ứng dụng.
 
-![OSI](/docs/pics/OSI_3.gif)
+![OSI](/docs/pics/mô_hình_mạng/OSI.png)
 - Khi phát triển các mô hình các nhà thiết kế đã phân tích quá trình chuyền dữ liệu ra các trức năng cơ bản nhất và nhóm các chức năng này vào các nhóm riêng gọi là một tầng (layer). Bằng cách khoanh vùng và xác định các trức năng trong mô hình, nhà thiết kế đã đưa ra một kiến trúc đạt được cả tính hoàn thiện và linh hoạt. Quan trọng nhất, mô hình OSI tạo ra tính trong suốt hoàn toàn giữa hai hệ thống không tương thích với nhau.
 
 ### Đặc điểm của các tầng:
