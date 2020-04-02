@@ -81,7 +81,7 @@ Tầng trình diễn có nhiệm vụ biểu diễn cú pháp và ngữ nghĩa c
 Nhiệm vụ: cho phép người dùng (con người hoặc phần mềm) truy cập vào mạng bằng cách cung cấp giao diện người sử dụng, hỗ trợ các dịch vụ như: thư điện tử , truy cập và chuyền file từ xa....
 
 ## 3. Mô hình TCP/IP:
-![](/docs/pics/TCP_IP.jpg)
+![](/docs/pics/mô_hình_mạng/OSI_3.jpg)
 
 Bộ giao thức này (được sử dụng cho internet) ra đời trước khi có mô hình OSI. Nó mang tên TCP/IP do sử dụng hai giao thức nền tảng là giao thức giao vận TCP (Transmission control protocols), và giao thức mạng IP (internet protocols).
 
