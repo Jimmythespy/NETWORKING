@@ -76,11 +76,11 @@ Có 2 kỹ thuật chuyển đổi được sử dụng: Dual-stack, tunneling.
 - **Dual-stack**: Là kỹ thuật đưa vào các thiết bị hỗ trợ cả hai phiên bản IP là IPv4 và IPv6. Những thiết bị như vậy có khả năng gửi và nhận cả hai gói dữ liệu thuộc hai phiên bản của IP. Khi trao đổi với một nút IPv4 nó sẽ sử dụng gói dữ liệu IPv4 và khi trao đổi với một nút IPv6 sẽ sử dụng gói dữ liệu IPv6. Nút này cần phải có cả hai loại địa chỉ, và phải có khả năng nhận biết được nút có khả năng IPv6 hay không. Điều này có thể giải quyết bằng hệ thống DNS.
   - Nhược điểm: Nó cho phép sử dụng cả hai phiên bản. Nhưng giả sử một nút hỗ trợ IPv6 muốn gửi gói tin IPv6 cho một máy hỗ trợ IPv6 qua một nút chỉ hỗ trợ IPv4. Trường hợp này gây ra hiện tượng phải chuyển từ IPv6 sang IPv4, khiến một số trường thông tin trong gói dữ liệu của IPv6 không được bảo toàn. Điều đó sẽ được khắc phục trong Tunneling.
 
-![anh](/docs/pics/Dual-stack.png)
+![anh](/docs/pics/địa_chỉ_IP/dual-stack.png)
 
 - **Tunneling**: Khắc phục vấn đề trên, kỹ thuật này cho phép đặt gói dữ liệu IPv6 vào trong gói dữ liệu của IPv4 để chuyển đi. Qua các nút chỉ hỗ trợ IPv4 và được tách ra thành gói dữ liệu nguyên bản khi đến nút hỗ trợ IPv6.
 
-![anh2](/docs/pics/Tunneling.png)
+![anh2](/docs/pics/địa_chỉ_IP/Untitled Diagram.png)
 
 ## 4. IPv4-mapped IPv6:
 - Sự áp dụng của dual-stack IPv4 và IPv6 đã tạo ra một loại địa chỉ đặc biệt hơn là địa chỉ IPv4-mapped IPv6. 
