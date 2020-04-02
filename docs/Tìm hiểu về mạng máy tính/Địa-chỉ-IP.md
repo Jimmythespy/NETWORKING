@@ -78,9 +78,9 @@ Có 2 kỹ thuật chuyển đổi được sử dụng: Dual-stack, tunneling.
 
 ![anh](/docs/pics/địa_chỉ_IP/dual-stack.png)
 
-- **Tunneling**: Khắc phục vấn đề trên, kỹ thuật này cho phép đặt gói dữ liệu IPv6 vào trong gói dữ liệu của IPv4 để chuyển đi. Qua các nút chỉ hỗ trợ IPv4 và được tách ra thành gói dữ liệu nguyên bản khi đến nút hỗ trợ IPv6.
+- **Tunneling**: Khắc phục vấn đề trên, kỹ thuật này cho phép đặt gói dữ liệu IPv6 vào trong gói dữ liệu của IPv4 để chuyển đi. Qua các nút chỉ hỗ trợ IPv4 và được tách ra thnh gói dữ liệu nguyên bản khi đến nút hỗ trợ IPv6.
 
-![anh2](/docs/pics/địa_chỉ_IP/Untitled Diagram.png)
+![anh2](/docs/pics/địa_chỉ_IP/Tunneling.png)
 
 ## 4. IPv4-mapped IPv6:
 - Sự áp dụng của dual-stack IPv4 và IPv6 đã tạo ra một loại địa chỉ đặc biệt hơn là địa chỉ IPv4-mapped IPv6. 
